@@ -1,0 +1,101 @@
+{
+  "_nota": "DATOS FICTICIOS — solo para demostración. IPs y dominios son ejemplos de documentación (RFC 5737).",
+  "objetivo": "https://demo-empresa.example.com",
+  "fecha": "2026-05-01T10:30:00",
+  "version_toolkit": "2.1.0",
+  "reconocimiento": {
+    "apex": "example.com",
+    "subdominio": "demo-empresa",
+    "ip": "203.0.113.42",
+    "dns": {
+      "mx": "Google Workspace",
+      "spf": "v=spf1 include:_spf.google.com ~all",
+      "spf_resultado": "pass",
+      "dmarc": null,
+      "dmarc_riesgo": "ausente — dominio vulnerable a email spoofing"
+    },
+    "waf": "Cloudflare",
+    "tech_stack": ["Nginx 1.18.0", "PHP 8.1.12", "WordPress 6.4"],
+    "wayback_urls_sensibles": 3,
+    "virustotal_score": "0/94",
+    "abuseipdb_score": 0
+  },
+  "whitebox": {
+    "archivos_analizados": 247,
+    "semgrep": {
+      "total": 3,
+      "por_severidad": {
+        "ALTO": 1,
+        "MEDIO": 1,
+        "BAJO": 1
+      },
+      "hallazgos": [
+        {
+          "severidad": "ALTO",
+          "tipo": "sql-injection-raw-query",
+          "archivo": "src/db/queries.php",
+          "linea": 142,
+          "descripcion": "Consulta SQL construida con concatenación de string"
+        },
+        {
+          "severidad": "MEDIO",
+          "tipo": "missing-csrf-token",
+          "archivo": "src/forms/contact.php",
+          "linea": 78,
+          "descripcion": "Formulario POST sin token CSRF"
+        },
+        {
+          "severidad": "BAJO",
+          "tipo": "weak-hash-md5",
+          "archivo": "src/auth/legacy.php",
+          "linea": 31,
+          "descripcion": "Hash MD5 para contraseñas (obsoleto)"
+        }
+      ]
+    },
+    "trufflehog": {
+      "total_secretos": 2,
+      "criticos": 1,
+      "secretos": [
+        {
+          "severidad": "CRITICO",
+          "tipo": "aws-access-key",
+          "archivo": "config/old_config.php",
+          "linea": 15,
+          "valor": "[REDACTADO]"
+        },
+        {
+          "severidad": "ALTO",
+          "tipo": "google-api-key",
+          "archivo": "src/integrations/maps.php",
+          "linea": 8,
+          "valor": "[REDACTADO]"
+        }
+      ]
+    }
+  },
+  "escaneo_dinamico": {
+    "nikto": {
+      "total_hallazgos": 7,
+      "por_severidad": { "ALTO": 2, "MEDIO": 3, "BAJO": 1, "INFO": 1 }
+    },
+    "nuclei": {
+      "total_hallazgos": 3,
+      "por_severidad": { "ALTO": 1, "MEDIO": 1, "BAJO": 1 }
+    }
+  },
+  "resumen": {
+    "total_hallazgos": 14,
+    "por_severidad": {
+      "CRITICO": 1,
+      "ALTO": 4,
+      "MEDIO": 5,
+      "BAJO": 3,
+      "INFORMATIVO": 1
+    },
+    "riesgo_general": "ALTO",
+    "reporte_firmado": true,
+    "algoritmo_firma": "RSA-SHA256",
+    "hash_sha256": "[REDACTADO — solo en entrega al cliente]"
+  }
+}

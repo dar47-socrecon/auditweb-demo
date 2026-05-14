@@ -1,0 +1,145 @@
+═══════════════════════════════════════════════════════════════
+  AUDIT WEB TOOLKIT — REPORTE DE AUDITORÍA
+  Versión: 2.1.0 | Fecha: 2026-05-01 | Auditor: AuditWeb
+═══════════════════════════════════════════════════════════════
+
+CLIENTE:   Empresa Demo S.A. (DATOS FICTICIOS)
+OBJETIVO:  https://demo-empresa.example.com
+PROYECTO:  Auditoría web externa — Mayo 2026
+ESTADO:    COMPLETADO
+
+Firma RSA-SHA256: [REDACTADO — solo en entregas al cliente]
+Hash SHA256:      [REDACTADO — solo en entregas al cliente]
+
+NOTA: Este reporte es un ejemplo con DATOS FICTICIOS para demostración.
+      Los reportes reales se entregan cifrados directamente al cliente.
+
+───────────────────────────────────────────────────────────────
+  RECONOCIMIENTO PASIVO (OSINT)
+───────────────────────────────────────────────────────────────
+
+  Dominio apex:        example.com
+  Subdominio:          demo-empresa
+  IP objetivo:         203.0.113.42 (RFC 5737 — dirección de documentación)
+
+  DNS:
+    MX:    Google Workspace (mail.google.com)
+    SPF:   "v=spf1 include:_spf.google.com ~all"  → PASS
+    DMARC: ausente                                 → RIESGO ALTO ⚠
+    NS:    ns1.cloudflare.com, ns2.cloudflare.com
+
+  WHOIS:
+    Registrador:  Namecheap
+    Creación:     2019-03-15
+    Expiración:   2027-03-15 (vigente)
+    Proveedor email: Google Workspace
+
+  WAF detectado:   Cloudflare (confianza alta)
+  Tech stack:      Nginx 1.18.0, PHP 8.1.12, WordPress 6.4
+
+  Wayback Machine: 14 URLs históricas — 3 sensibles:
+    /wp-content/uploads/2021/backup.zip   [acceso público — ALTO]
+    /admin/phpinfo.php                    [ya eliminado]
+    /.git/config                          [ya eliminado]
+
+  VirusTotal:  0/94 motores — reputación limpia
+  AbuseIPDB:   Score 0/100 — sin reportes
+
+───────────────────────────────────────────────────────────────
+  ANÁLISIS DE CÓDIGO FUENTE (WHITEBOX)
+───────────────────────────────────────────────────────────────
+
+  Herramientas: Semgrep 1.x + Trufflehog 3.x
+  Archivos analizados: 247
+
+  SEMGREP — Hallazgos SAST:
+    [ALTO]  sql-injection-raw-query     → src/db/queries.php:142
+            Consulta SQL construida con concatenación de string
+            Recomendación: usar prepared statements (PDO/MySQLi)
+
+    [MEDIO] missing-csrf-token          → src/forms/contact.php:78
+            Formulario POST sin token CSRF
+            Recomendación: implementar CSRF token en sesión
+
+    [BAJO]  weak-hash-md5               → src/auth/legacy.php:31
+            Hash MD5 para contraseñas (obsoleto)
+            Recomendación: migrar a bcrypt/argon2
+
+  TRUFFLEHOG — Secretos detectados:
+    [CRÍTICO] AWS Access Key            → config/old_config.php:15
+              AKIA[REDACTADO]
+              Acción: revocar inmediatamente en consola AWS
+
+    [ALTO]    API Key hardcodeada       → src/integrations/maps.php:8
+              AIza[REDACTADO]
+              Acción: mover a variable de entorno
+
+───────────────────────────────────────────────────────────────
+  ESCANEO DINÁMICO
+───────────────────────────────────────────────────────────────
+
+  NIKTO (HTTP):
+    [ALTO]   Directorio /backup/ accesible públicamente
+    [ALTO]   Header X-Frame-Options ausente → riesgo clickjacking
+    [MEDIO]  Server header expone versión: "nginx/1.18.0"
+    [MEDIO]  Cookie de sesión sin flag HttpOnly
+    [MEDIO]  Cookie de sesión sin flag Secure
+    [BAJO]   HSTS no configurado (HTTP disponible sin redirect)
+    [INFO]   Métodos HTTP permitidos: GET, POST, OPTIONS, HEAD
+
+  NUCLEI (CVEs y misconfigs):
+    [ALTO]   CVE-2023-FICTICIO — WordPress plugin vulnerable
+             Plugin: contact-form-7 v5.7.5 (actualizar a 5.8+)
+    [MEDIO]  SSL/TLS — TLSv1.0 habilitado (obsoleto)
+             Recomendación: deshabilitar TLSv1.0 y TLSv1.1
+    [BAJO]   Cabecera Content-Security-Policy ausente
+
+───────────────────────────────────────────────────────────────
+  RESUMEN EJECUTIVO
+───────────────────────────────────────────────────────────────
+
+  Total hallazgos: 14
+  ┌──────────────┬───────┐
+  │ Severidad    │ Count │
+  ├──────────────┼───────┤
+  │ CRÍTICO      │   1   │
+  │ ALTO         │   4   │
+  │ MEDIO        │   5   │
+  │ BAJO         │   3   │
+  │ INFORMATIVO  │   1   │
+  └──────────────┴───────┘
+
+  Riesgo general: ALTO
+
+  Top 3 acciones inmediatas:
+  1. REVOCAR la AWS Access Key expuesta en config/old_config.php
+  2. ELIMINAR /backup/ o restringir acceso por IP/autenticación
+  3. IMPLEMENTAR DMARC para proteger el dominio de email spoofing
+
+───────────────────────────────────────────────────────────────
+  METODOLOGÍA Y ALCANCE
+───────────────────────────────────────────────────────────────
+
+  Tipo de auditoría: Caja gris (acceso a código + escaneo externo)
+  Autorización:      Documento firmado RSA-SHA256 — ref. AUT-20260501
+  Alcance:           Dominio principal + subdominios directos
+  Fuera de alcance:  Infraestructura de terceros (CDN, DNS, correo)
+  Entorno:           Producción (escaneo no intrusivo)
+
+───────────────────────────────────────────────────────────────
+  NOTA LEGAL
+───────────────────────────────────────────────────────────────
+
+  Esta auditoría fue realizada bajo autorización escrita del cliente.
+  Documento de autorización firmado: AUT-20260501-EMPRESA-DEMO.txt
+  Firma digital verificable con clave pública RSA del auditor.
+
+  Toda la información contenida en este reporte es confidencial
+  y de uso exclusivo del cliente. Prohibida su distribución.
+
+═══════════════════════════════════════════════════════════════
+  FIN DEL REPORTE — AuditWeb Toolkit v2.1.0
+  Contacto: infra.socrecon@proton.me
+═══════════════════════════════════════════════════════════════
+
+[DATOS FICTICIOS — SOLO PARA DEMOSTRACIÓN]
