@@ -1,0 +1,269 @@
+NOTA: Reporte real generado por AuditWeb Toolkit sobre un dominio propio
+      (daniangel79.github.io) con autorización del titular. Publicado como
+      ejemplo de entregable profesional. Firma RSA-SHA256 verificable.
+═════════════════════════════════════════════════════════════════
+REPORTE DE AUDITORÍA WEB — WEB_OPF
+═════════════════════════════════════════════════════════════════
+Generado   : 14/05/2026 20:21:20
+Objetivo   : https://daniangel79.github.io/auditweb-landing/
+Tipo sitio : WEB
+Módulo     : web_opF
+Cliente    : Sin asignar
+Proyecto   : Sin proyecto
+═════════════════════════════════════════════════════════════════
+
+HALLAZGOS TÉCNICOS:
+═════════════════════════════════════════════════════════════════
+=== AUDITORÍA COMPLETA ===
+URL: https://daniangel79.github.io/auditweb-landing/
+Fecha: 14/05/2026 20:10:34
+Infraestructura: CDN genérico (Fastly / Varnish / otro) (confianza: baja)
+
+=== HEADERS HTTP ===
+URL: https://daniangel79.github.io/auditweb-landing/
+Fecha: 14/05/2026 20:09:38
+Status: 200
+
+── Headers de seguridad ─────────────────────
+  ❌ X-Frame-Options: AUSENTE
+  ✅ Strict-Transport-Security: max-age=31556952
+  ❌ X-Content-Type-Options: AUSENTE
+  ❌ Content-Security-Policy: AUSENTE
+  ❌ X-Xss-Protection: AUSENTE
+  ❌ Permissions-Policy: AUSENTE
+  ❌ Referrer-Policy: AUSENTE
+  ❌ Cross-Origin-Embedder-Policy: AUSENTE
+  ❌ Cross-Origin-Opener-Policy: AUSENTE
+  ❌ Cross-Origin-Resource-Policy: AUSENTE
+
+  Presentes: 1 | Ausentes: 9
+
+── Headers informativos (pueden exponer versiones) ──
+  ⚠️  server: GitHub.com
+
+── Cookies (flags de seguridad) ──────────────
+
+── Referencia MITRE ATT&CK (headers ausentes) ──
+  T1185 — Clickjacking (ausencia de x-frame-options)
+  T1059 — MIME sniffing (ausencia de x-content-type-options)
+  T1059.007 — XSS básico (ausencia de x-xss-protection)
+  T1059.007 — Inyección de scripts (ausencia de content-security-policy)
+
+=== SSL/TLS ===
+Dominio: daniangel79.github.io
+Fecha: 14/05/2026 20:09:38
+
+✅ SSL válido
+Protocolo : TLSv1.3
+Expira    : 05/07/2026 (51d)
+Para      : *.github.io
+Emisor    : Let's Encrypt
+SAN       : *.github.com, *.github.io, *.githubusercontent.com, github.com, github.io, githubusercontent.com
+
+── sslscan ──────────────────────────────────
+  OpenSSL 3.6.2 7 Apr 2026
+  Testing SSL server daniangel79.github.io on port 443 using SNI name daniangel79.github.io
+    SSL/TLS Protocols:
+  SSLv2     disabled
+  SSLv3     disabled
+  TLSv1.0   disabled
+  TLSv1.1   disabled
+  TLSv1.2   enabled
+  TLSv1.3   enabled
+    TLS Fallback SCSV:
+  Server supports TLS Fallback SCSV
+    TLS renegotiation:
+  Session renegotiation not supported
+    TLS Compression:
+  Compression disabled
+    Heartbleed:
+  TLSv1.3 not vulnerable to heartbleed
+  TLSv1.2 not vulnerable to heartbleed
+    Supported Server Cipher(s):
+  Preferred TLSv1.3  128 bits  TLS_AES_128_GCM_SHA256       
+  Accepted  TLSv1.3  256 bits  TLS_AES_256_GCM_SHA384       
+  Accepted  TLSv1.3  256 bits  TLS_CHACHA20_POLY1305_SHA256 
+  Preferred TLSv1.2  256 bits  ECDHE-RSA-CHACHA20-POLY1305   Curve 25519 DHE 253
+  Accepted  TLSv1.2  128 bits  ECDHE-RSA-AES128-GCM-SHA256   Curve 25519 DHE 253
+  Accepted  TLSv1.2  256 bits  ECDHE-RSA-AES256-GCM-SHA384   Curve 25519 DHE 253
+  Accepted  TLSv1.2  128 bits  ECDHE-RSA-AES128-SHA256       Curve 25519 DHE 253
+  Accepted  TLSv1.2  128 bits  ECDHE-RSA-AES128-SHA          Curve 25519 DHE 253
+  Accepted  TLSv1.2  256 bits  ECDHE-RSA-AES256-SHA          Curve 25519 DHE 253
+  Accepted  TLSv1.2  128 bits  AES128-GCM-SHA256            
+  Accepted  TLSv1.2  128 bits  AES128-SHA                   
+  Accepted  TLSv1.2  256 bits  AES256-SHA                   
+  TLSv1.3  128 bits  secp256r1 (NIST P-256)
+  TLSv1.3  192 bits  secp384r1 (NIST P-384)
+  TLSv1.3  128 bits  x25519
+  TLSv1.2  128 bits  secp256r1 (NIST P-256)
+  TLSv1.2  192 bits  secp384r1 (NIST P-384)
+  TLSv1.2  128 bits  x25519
+    SSL Certificate:
+
+=== TECNOLOGÍAS ===
+https://daniangel79.github.io/auditweb-landing/ [200 OK] Email[infra.socrecon@proton.me], HTML5, HTTPServer[GitHub.com], IP[185.199.108.153], Open-Graph-Protocol[website], Script, Strict-Transport-Security[max-age=31556952], Title[AuditWeb — Auditoría de Seguridad Web Profesional], UncommonHeaders[access-control-allow-origin,x-proxy-cache,x-github-request-id,x-served-by,x-cache-hits,x-timer,x-fastly-request-id], Via-Proxy[1.1 varnish]
+=== WAF DETECTION ===
+URL: https://daniangel79.github.io/auditweb-landing/
+
+── wafw00f ──────────────────────────────
+[1;97m______
+               [1;97m/      \
+              [1;97m(  W00f! )
+               [1;97m\  ____/
+               [1;97m,,    [1;92m__            [1;93m404 Hack Not Found
+           [1;96m|`-.__   [1;92m/ /                     [1;91m __     __
+           [1;96m/"  _/  [1;92m/_/                       [1;91m\ \   / /
+          [1;94m*===*    [1;92m/                          [1;91m\ \_/ /  [1;93m405 Not Allowed
+         [1;96m/     )__//                           [1;91m\   /
+    [1;96m/|  /     /---`                        [1;93m403 Forbidden
+    [1;96m\\/`   \ |                                 [1;91m/ _ \
+    [1;96m`\    /_\\_              [1;93m502 Bad Gateway  [1;91m/ / \ \  [1;93m500 Internal Error
+      [1;96m`_____``-`                             [1;91m/_/   \_\\
+
+                        [1;96m~ WAFW00F : [1;94mv2.4.2 ~[1;97m
+        The Web Application Firewall Fingerprinting Toolkit
+    [0m
+[*] Checking https://daniangel79.github.io/auditweb-landing/
+[+] The site [1;94mhttps://daniangel79.github.io/auditweb-landing/[0m is behind [1;96mFastly (Fastly CDN)[0m WAF.
+[~] Number of requests: 2
+
+── nmap http-waf-detect ─────────────────
+Starting Nmap 7.99 ( https://nmap.org ) at 2026-05-14 20:09 -0400
+Nmap scan report for daniangel79.github.io (185.199.108.153)
+Host is up (0.043s latency).
+Other addresses for daniangel79.github.io (not scanned): 2606:50c0:8000::153 2606:50c0:8003::153 2606:50c0:8002::153 2606:50c0:8001::153 185.199.110.153 185.199.109.153 185.199.111.153
+
+PORT    STATE SERVICE
+80/tcp  open  http
+443/tcp open  https
+
+Nmap done: 1 IP address (1 host up) scanned in 0.80 seconds
+
+=== PUERTOS WEB ===
+Dominio: daniangel79.github.io
+
+Starting Nmap 7.99 ( https://nmap.org ) at 2026-05-14 20:09 -0400
+Nmap scan report for daniangel79.github.io (185.199.111.153)
+Host is up (0.042s latency).
+Other addresses for daniangel79.github.io (not scanned): 2606:50c0:8001::153 2606:50c0:8002::153 2606:50c0:8003::153 2606:50c0:8000::153 185.199.109.153 185.199.110.153 185.199.108.153
+Not shown: 12 filtered tcp ports (no-response)
+Some closed ports may be reported as filtered due to --defeat-rst-ratelimit
+PORT    STATE SERVICE   VERSION
+80/tcp  open  http      GitHub.com
+443/tcp open  ssl/https GitHub.com
+2 services unrecognized despite returning data. If you know the service/version, please submit the following fingerprints at https://nmap.org/cgi-bin/submit.cgi?new-service :
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port80-TCP:V=7.99%I=7%D=5/14%Time=6A06645C%P=x86_64-pc-linux-gnu%r(GetR
+SF:equest,A1,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nConnection:\x20close\r
+SF:\nContent-Length:\x2017\r\ncontent-type:\x20text/plain;\x20charset=utf-
+SF:8\r\nx-served-by:\x20cache-gru-sbsp2090037\r\n\r\nmissing\x20authority"
+SF:)%r(HTTPOptions,A1,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nConnection:\x
+SF:20close\r\nContent-Length:\x2017\r\ncontent-type:\x20text/plain;\x20cha
+SF:rset=utf-8\r\nx-served-by:\x20cache-gru-sbsp2090052\r\n\r\nmissing\x20a
+SF:uthority")%r(RTSPRequest,9B,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nConn
+SF:ection:\x20close\r\nContent-Length:\x2011\r\ncontent-type:\x20text/plai
+SF:n;\x20charset=utf-8\r\nx-served-by:\x20cache-gru-sbsp2090069\r\n\r\nBad
+SF:\x20Request")%r(X11Probe,9B,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nConn
+SF:ection:\x20close\r\nContent-Length:\x2011\r\ncontent-type:\x20text/plai
+SF:n;\x20charset=utf-8\r\nx-served-by:\x20cache-gru-sbsp2090038\r\n\r\nBad
+SF:\x20Request")%r(FourOhFourRequest,A1,"HTTP/1\.1\x20400\x20Bad\x20Reques
+SF:t\r\nConnection:\x20close\r\nContent-Length:\x2017\r\ncontent-type:\x20
+SF:text/plain;\x20charset=utf-8\r\nx-served-by:\x20cache-gru-sbsp2090059\r
+SF:\n\r\nmissing\x20authority")%r(RPCCheck,9B,"HTTP/1\.1\x20400\x20Bad\x20
+SF:Request\r\nConnection:\x20close\r\nContent-Length:\x2011\r\ncontent-typ
+SF:e:\x20text/plain;\x20charset=utf-8\r\nx-served-by:\x20cache-gru-sbsp209
+SF:0038\r\n\r\nBad\x20Request")%r(DNSVersionBindReqTCP,9B,"HTTP/1\.1\x2040
+SF:0\x20Bad\x20Request\r\nConnection:\x20close\r\nContent-Length:\x2011\r\
+SF:ncontent-type:\x20text/plain;\x20charset=utf-8\r\nx-served-by:\x20cache
+SF:-gru-sbsp2090057\r\n\r\nBad\x20Request")%r(DNSStatusRequestTCP,9B,"HTTP
+SF:/1\.1\x20400\x20Bad\x20Request\r\nConnection:\x20close\r\nContent-Lengt
+SF:h:\x2011\r\ncontent-type:\x20text/plain;\x20charset=utf-8\r\nx-served-b
+SF:y:\x20cache-gru-sbsp2090067\r\n\r\nBad\x20Request")%r(Help,9B,"HTTP/1\.
+SF:1\x20400\x20Bad\x20Request\r\nConnection:\x20close\r\nContent-Length:\x
+SF:2011\r\ncontent-type:\x20text/plain;\x20charset=utf-8\r\nx-served-by:\x
+SF:20cache-gru-sbsp2090061\r\n\r\nBad\x20Request")%r(SSLSessionReq,9B,"HTT
+SF:P/1\.1\x20400\x20Bad\x20Request\r\nConnection:\x20close\r\nContent-Leng
+SF:th:\x2011\r\ncontent-type:\x20text/plain;\x20charset=utf-8\r\nx-served-
+SF:by:\x20cache-gru-sbsp2090048\r\n\r\nBad\x20Request");
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port443-TCP:V=7.99%T=SSL%I=7%D=5/14%Time=6A066462%P=x86_64-pc-linux-gnu
+SF:%r(GetRequest,A1,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nConnection:\x20
+SF:close\r\nContent-Length:\x2017\r\ncontent-type:\x20text/plain;\x20chars
+SF:et=utf-8\r\nx-served-by:\x20cache-gru-sbsp2090045\r\n\r\nmissing\x20aut
+SF:hority")%r(HTTPOptions,A1,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nConnec
+SF:tion:\x20close\r\nContent-Length:\x2017\r\ncontent-type:\x20text/plain;
+SF:\x20charset=utf-8\r\nx-served-by:\x20cache-gru-sbsp2090081\r\n\r\nmissi
+SF:ng\x20authority")%r(FourOhFourRequest,A1,"HTTP/1\.1\x20400\x20Bad\x20Re
+SF:quest\r\nConnection:\x20close\r\nContent-Length:\x2017\r\ncontent-type:
+SF:\x20text/plain;\x20charset=utf-8\r\nx-served-by:\x20cache-gru-sbsp20900
+SF:25\r\n\r\nmissing\x20authority")%r(tor-versions,9B,"HTTP/1\.1\x20400\x2
+SF:0Bad\x20Request\r\nConnection:\x20close\r\nContent-Length:\x2011\r\ncon
+SF:tent-type:\x20text/plain;\x20charset=utf-8\r\nx-served-by:\x20cache-gru
+SF:-sbsp2090079\r\n\r\nBad\x20Request")%r(RTSPRequest,9B,"HTTP/1\.1\x20400
+SF:\x20Bad\x20Request\r\nConnection:\x20close\r\nContent-Length:\x2011\r\n
+SF:content-type:\x20text/plain;\x20charset=utf-8\r\nx-served-by:\x20cache-
+SF:gru-sbsp2090082\r\n\r\nBad\x20Request")%r(RPCCheck,9B,"HTTP/1\.1\x20400
+SF:\x20Bad\x20Request\r\nConnection:\x20close\r\nContent-Length:\x2011\r\n
+SF:content-type:\x20text/plain;\x20charset=utf-8\r\nx-served-by:\x20cache-
+SF:gru-sbsp2090079\r\n\r\nBad\x20Request")%r(DNSVersionBindReqTCP,9B,"HTTP
+SF:/1\.1\x20400\x20Bad\x20Request\r\nConnection:\x20close\r\nContent-Lengt
+SF:h:\x2011\r\ncontent-type:\x20text/plain;\x20charset=utf-8\r\nx-served-b
+SF:y:\x20cache-gru-sbsp2090033\r\n\r\nBad\x20Request")%r(DNSStatusRequestT
+SF:CP,9B,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nConnection:\x20close\r\nCo
+SF:ntent-Length:\x2011\r\ncontent-type:\x20text/plain;\x20charset=utf-8\r\
+SF:nx-served-by:\x20cache-gru-sbsp2090038\r\n\r\nBad\x20Request")%r(Help,9
+SF:B,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nConnection:\x20close\r\nConten
+SF:t-Length:\x2011\r\ncontent-type:\x20text/plain;\x20charset=utf-8\r\nx-s
+SF:erved-by:\x20cache-gru-sbsp2090083\r\n\r\nBad\x20Request")%r(SSLSession
+SF:Req,9B,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nConnection:\x20close\r\nC
+SF:ontent-Length:\x2011\r\ncontent-type:\x20text/plain;\x20charset=utf-8\r
+SF:\nx-served-by:\x20cache-gru-sbsp2090029\r\n\r\nBad\x20Request");
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 19.76 seconds
+
+=== CORS POLICY ===
+URL: https://daniangel79.github.io/auditweb-landing/
+
+Headers CORS encontrados:
+  access-control-allow-origin: *
+
+  🔴 CRÍTICO: Access-Control-Allow-Origin: * (permite cualquier origen)
+
+=== CVEs POR TECNOLOGÍA ===
+
+Sin CVEs recientes relevantes.
+
+=== REPUTACIÓN ===
+  ✅ VirusTotal — Malicious: 0 | Suspicious: 0 | Undetected: 32
+  Error Safe Browsing: HTTP 400
+  🟡 AbuseIPDB — Score: 44% | Reportes: 17 | País: US | ISP: GitHub, Inc.
+  ℹ️  Shodan — IP: 185.199.108.153 | OS: None | Puertos: [80, 443]
+
+
+═════════════════════════════════════════════════════════════════
+ANÁLISIS — WEB ANALYST (Ollama — IA Local)
+═════════════════════════════════════════════════════════════════
+Infraestructura CDN genérica con ausencia de algunos headers de seguridad básicos, posible exposición de versiones del servidor.
+
+═════════════════════════════════════════════════════════════════
+AVISO LEGAL
+═════════════════════════════════════════════════════════════════
+Reporte generado con autorización expresa del titular del sistema.
+Auditoría ética — Solo para uso interno del cliente.
+Ley 25.326 — Protección de Datos Personales (Argentina)
+Ley 26.388 — Delitos Informáticos (Argentina)
+═════════════════════════════════════════════════════════════════
+
+═════════════════════════════════════════════════════════════════
+FIRMA DIGITAL DEL REPORTE
+═════════════════════════════════════════════════════════════════
+Algoritmo  : RSA-2048 + SHA256
+SHA256     : be791f21527103ab01bddc4fad5e35a2229537288ffb7913d7a33379b53ff159
+Timestamp  : 2026-05-14T20:21:20.585820
+Firma (hex): 40c860953a52b854c27a58af6243c3d39cbe1529ab4b11685fbb31b6b32e7bde130bf7fc901669a2...
+═════════════════════════════════════════════════════════════════
+VERIFICACIÓN:
+  La firma digital garantiza que este reporte no fue modificado.
+  Para verificar: usar el certificado público en autorizaciones/signing.crt
+═════════════════════════════════════════════════════════════════

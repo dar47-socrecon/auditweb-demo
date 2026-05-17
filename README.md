@@ -87,7 +87,9 @@ Ejemplo real de salida (datos ficticios):
   Guardado en base de datos cifrada ✓
 ```
 
-Ver reporte completo de ejemplo: [demo/sample_report.txt](demo/sample_report.txt)
+Ver reporte de ejemplo (datos ficticios): [demo/sample_report.txt](demo/sample_report.txt)
+
+Ver reporte real (dominio propio, autorizado): [demo/real_report_example.txt](demo/real_report_example.txt)
 
 ---
 
