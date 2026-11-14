@@ -1,11 +1,11 @@
 NOTA: Reporte real generado por AuditWeb Toolkit sobre un dominio propio
-      (daniangel79.github.io) con autorización del titular. Publicado como
+      (dar47-socrecon.github.io) con autorización del titular. Publicado como
       ejemplo de entregable profesional. Firma RSA-SHA256 verificable.
 ═════════════════════════════════════════════════════════════════
 REPORTE DE AUDITORÍA WEB — WEB_OPF
 ═════════════════════════════════════════════════════════════════
 Generado   : 14/05/2026 20:21:20
-Objetivo   : https://daniangel79.github.io/auditweb-landing/
+Objetivo   : https://dar47-socrecon.github.io/auditweb-landing/
 Tipo sitio : WEB
 Módulo     : web_opF
 Cliente    : Sin asignar
@@ -15,12 +15,12 @@ Proyecto   : Sin proyecto
 HALLAZGOS TÉCNICOS:
 ═════════════════════════════════════════════════════════════════
 === AUDITORÍA COMPLETA ===
-URL: https://daniangel79.github.io/auditweb-landing/
+URL: https://dar47-socrecon.github.io/auditweb-landing/
 Fecha: 14/05/2026 20:10:34
 Infraestructura: CDN genérico (Fastly / Varnish / otro) (confianza: baja)
 
 === HEADERS HTTP ===
-URL: https://daniangel79.github.io/auditweb-landing/
+URL: https://dar47-socrecon.github.io/auditweb-landing/
 Fecha: 14/05/2026 20:09:38
 Status: 200
 
@@ -50,7 +50,7 @@ Status: 200
   T1059.007 — Inyección de scripts (ausencia de content-security-policy)
 
 === SSL/TLS ===
-Dominio: daniangel79.github.io
+Dominio: dar47-socrecon.github.io
 Fecha: 14/05/2026 20:09:38
 
 ✅ SSL válido
@@ -62,7 +62,7 @@ SAN       : *.github.com, *.github.io, *.githubusercontent.com, github.com, gith
 
 ── sslscan ──────────────────────────────────
   OpenSSL 3.6.2 7 Apr 2026
-  Testing SSL server daniangel79.github.io on port 443 using SNI name daniangel79.github.io
+  Testing SSL server dar47-socrecon.github.io on port 443 using SNI name dar47-socrecon.github.io
     SSL/TLS Protocols:
   SSLv2     disabled
   SSLv3     disabled
@@ -101,9 +101,9 @@ SAN       : *.github.com, *.github.io, *.githubusercontent.com, github.com, gith
     SSL Certificate:
 
 === TECNOLOGÍAS ===
-https://daniangel79.github.io/auditweb-landing/ [200 OK] Email[infra.socrecon@proton.me], HTML5, HTTPServer[GitHub.com], IP[185.199.108.153], Open-Graph-Protocol[website], Script, Strict-Transport-Security[max-age=31556952], Title[AuditWeb — Auditoría de Seguridad Web Profesional], UncommonHeaders[access-control-allow-origin,x-proxy-cache,x-github-request-id,x-served-by,x-cache-hits,x-timer,x-fastly-request-id], Via-Proxy[1.1 varnish]
+https://dar47-socrecon.github.io/auditweb-landing/ [200 OK] Email[infra.socrecon@proton.me], HTML5, HTTPServer[GitHub.com], IP[185.199.108.153], Open-Graph-Protocol[website], Script, Strict-Transport-Security[max-age=31556952], Title[AuditWeb — Auditoría de Seguridad Web Profesional], UncommonHeaders[access-control-allow-origin,x-proxy-cache,x-github-request-id,x-served-by,x-cache-hits,x-timer,x-fastly-request-id], Via-Proxy[1.1 varnish]
 === WAF DETECTION ===
-URL: https://daniangel79.github.io/auditweb-landing/
+URL: https://dar47-socrecon.github.io/auditweb-landing/
 
 ── wafw00f ──────────────────────────────
 [1;97m______
@@ -123,15 +123,15 @@ URL: https://daniangel79.github.io/auditweb-landing/
                         [1;96m~ WAFW00F : [1;94mv2.4.2 ~[1;97m
         The Web Application Firewall Fingerprinting Toolkit
     [0m
-[*] Checking https://daniangel79.github.io/auditweb-landing/
-[+] The site [1;94mhttps://daniangel79.github.io/auditweb-landing/[0m is behind [1;96mFastly (Fastly CDN)[0m WAF.
+[*] Checking https://dar47-socrecon.github.io/auditweb-landing/
+[+] The site [1;94mhttps://dar47-socrecon.github.io/auditweb-landing/[0m is behind [1;96mFastly (Fastly CDN)[0m WAF.
 [~] Number of requests: 2
 
 ── nmap http-waf-detect ─────────────────
 Starting Nmap 7.99 ( https://nmap.org ) at 2026-05-14 20:09 -0400
-Nmap scan report for daniangel79.github.io (185.199.108.153)
+Nmap scan report for dar47-socrecon.github.io (185.199.108.153)
 Host is up (0.043s latency).
-Other addresses for daniangel79.github.io (not scanned): 2606:50c0:8000::153 2606:50c0:8003::153 2606:50c0:8002::153 2606:50c0:8001::153 185.199.110.153 185.199.109.153 185.199.111.153
+Other addresses for dar47-socrecon.github.io (not scanned): 2606:50c0:8000::153 2606:50c0:8003::153 2606:50c0:8002::153 2606:50c0:8001::153 185.199.110.153 185.199.109.153 185.199.111.153
 
 PORT    STATE SERVICE
 80/tcp  open  http
@@ -140,12 +140,12 @@ PORT    STATE SERVICE
 Nmap done: 1 IP address (1 host up) scanned in 0.80 seconds
 
 === PUERTOS WEB ===
-Dominio: daniangel79.github.io
+Dominio: dar47-socrecon.github.io
 
 Starting Nmap 7.99 ( https://nmap.org ) at 2026-05-14 20:09 -0400
-Nmap scan report for daniangel79.github.io (185.199.111.153)
+Nmap scan report for dar47-socrecon.github.io (185.199.111.153)
 Host is up (0.042s latency).
-Other addresses for daniangel79.github.io (not scanned): 2606:50c0:8001::153 2606:50c0:8002::153 2606:50c0:8003::153 2606:50c0:8000::153 185.199.109.153 185.199.110.153 185.199.108.153
+Other addresses for dar47-socrecon.github.io (not scanned): 2606:50c0:8001::153 2606:50c0:8002::153 2606:50c0:8003::153 2606:50c0:8000::153 185.199.109.153 185.199.110.153 185.199.108.153
 Not shown: 12 filtered tcp ports (no-response)
 Some closed ports may be reported as filtered due to --defeat-rst-ratelimit
 PORT    STATE SERVICE   VERSION
@@ -223,7 +223,7 @@ Service detection performed. Please report any incorrect results at https://nmap
 Nmap done: 1 IP address (1 host up) scanned in 19.76 seconds
 
 === CORS POLICY ===
-URL: https://daniangel79.github.io/auditweb-landing/
+URL: https://dar47-socrecon.github.io/auditweb-landing/
 
 Headers CORS encontrados:
   access-control-allow-origin: *

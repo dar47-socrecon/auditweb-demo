@@ -3,7 +3,7 @@ name: Solicitud de auditoría
 about: Solicitar una auditoría web profesional
 title: "[AUDITORÍA] "
 labels: audit-request
-assignees: DaniAngel79
+assignees: dar47-socrecon
 ---
 
 **Dominio/URL objetivo:**
