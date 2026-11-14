@@ -175,7 +175,7 @@ Este repositorio es una **demo pública** del toolkit. El código fuente es priv
 Para auditorías o consultas profesionales:
 
 📧 [infra.socrecon@proton.me](mailto:infra.socrecon@proton.me)  
-🌐 [auditweb-landing](https://DaniAngel79.github.io/auditweb-landing/)
+🌐 [auditweb-landing](https://dar47-socrecon.github.io/auditweb-landing/)
 
 ---
 
